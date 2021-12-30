@@ -24,6 +24,15 @@ namespace CSharpSecaoDez.ExercicioConta.Entities
         public void UpdateBalance()
         {
             Balance += Balance * InterestRate;
+        }       
+        public override void Withdraw(double amount)
+        {
+            base.Withdraw(amount);
+            Balance -= 2.0;
+        }
+        public override void Deposit(double amount)
+        {
+            Balance += amount;
         }
     }
 }

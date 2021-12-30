@@ -9,9 +9,9 @@ namespace  CSharpSecaoDez.ExercicioConta.Entities
 {
     public class Account
     {
-        public virtual int NumberAccount { get; private set; }
-        public virtual string Holder { get; private set; }
-        public virtual double Balance { get; protected set; }
+        public  int NumberAccount { get; private set; }
+        public string Holder { get; private set; }
+        public double Balance { get; protected set; }
 
         public Account()
         {
@@ -23,10 +23,9 @@ namespace  CSharpSecaoDez.ExercicioConta.Entities
             Holder = externalHolder;
             Balance = externalBalance;
         }
-
         public virtual void Withdraw(double amount)
         {
-            Balance -= amount;
+            Balance -= amount + 5.0;
         }
         public virtual void Deposit(double amount)
         {
