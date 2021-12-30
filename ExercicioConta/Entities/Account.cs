@@ -30,7 +30,7 @@ namespace  CSharpSecaoDez.ExercicioConta.Entities
         }
         public virtual void Deposit(double amount)
         {
-            Balance += amount;
+            Balance += amount; 
         }
     }
 }
