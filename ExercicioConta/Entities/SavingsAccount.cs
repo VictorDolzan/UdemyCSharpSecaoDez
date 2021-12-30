@@ -7,7 +7,7 @@ using System.Globalization;
 
 namespace CSharpSecaoDez.ExercicioConta.Entities
 {
-    class SavingsAccount : Account
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -25,7 +25,7 @@ namespace CSharpSecaoDez.ExercicioConta.Entities
         {
             Balance += Balance * InterestRate;
         }       
-        public override void Withdraw(double amount)
+        public sealed override void Withdraw(double amount)
         {
             base.Withdraw(amount);
             Balance -= 2.0;
