@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Globalization;
 using CSharpSecaoDez.ExercicioConta;
 using CSharpSecaoDez.ExercicioConta.Entities;
+using CSharpSecaoDez.ExercicioResolvido;
+using CSharpSecaoDez.ExercicioResolvido.EntitiesR;
 
 namespace  CSharpSecaoDez
 {
@@ -13,7 +15,8 @@ namespace  CSharpSecaoDez
     {
         public static void Main(string[] args)
         {
-            ExercicioConta.ExercicioConta.ExecutarExercicioConta();
+          //  ExercicioConta.ExercicioConta.ExecutarExercicioConta();
+          ExercicioResolvido.ExercicioResolvido.ExecutarExercicioResolvido();
         }
 
     }
