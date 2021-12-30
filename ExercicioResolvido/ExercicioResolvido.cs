@@ -12,9 +12,6 @@ namespace CSharpSecaoDez.ExercicioResolvido
     {
         public static void ExecutarExercicioResolvido()
         {
-            Employee emp = new OutsourcedEmployee();
-            Employee emp2 = new Employee();
-
             Console.Write("Enter the number of employees : ");
             int nEmployee = int.Parse(Console.ReadLine());
 
@@ -23,25 +20,23 @@ namespace CSharpSecaoDez.ExercicioResolvido
             {
                 Console.WriteLine($"Employee #{cont} data:");
                 Console.Write("Outsourced (y/n)? ");
-                string outSourcedSelect = Console.ReadLine();
+                char outSourcedSelect = char.Parse(Console.ReadLine());
                 Console.Write("Name: ");
                 string eName = Console.ReadLine();
                 Console.Write("Hours: ");
                 int eHours = int.Parse(Console.ReadLine());
                 Console.Write("Value per Hour: ");
-                double eVPerHour = double.Parse(Console.ReadLine());
+                double eVPerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-                if (outSourcedSelect == "y" || outSourcedSelect == "Y")
+                if (outSourcedSelect == 'y' || outSourcedSelect == 'Y')
                 {
                     Console.Write("Additional charge: ");
                     double eAddCharge = double.Parse(Console.ReadLine());
-                    emp = new OutsourcedEmployee(eName, eHours, eVPerHour, eAddCharge);
-                    lista.Add(emp);
+                    lista.Add(new OutsourcedEmployee(eName, eHours, eVPerHour, eAddCharge));                    
                 }
                 else
                 {
-                    emp2 = new Employee(eName, eHours, eVPerHour);
-                    lista.Add(emp2);
+                    lista.Add(new Employee(eName, eHours, eVPerHour));                    
                 }
 
             }
@@ -49,7 +44,7 @@ namespace CSharpSecaoDez.ExercicioResolvido
             Console.WriteLine("Payments: ");
             foreach (Employee empO in lista)
             {
-                Console.WriteLine(empO.EmployeeName + " - $" + empO.Payment());
+                Console.WriteLine(empO.EmployeeName + " - $" + empO.Payment().ToString("F2"));
             }
 
         }

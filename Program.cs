@@ -8,6 +8,8 @@ using CSharpSecaoDez.ExercicioConta;
 using CSharpSecaoDez.ExercicioConta.Entities;
 using CSharpSecaoDez.ExercicioResolvido;
 using CSharpSecaoDez.ExercicioResolvido.EntitiesR;
+using CSharpSecaoDez.ExercicioFixacao;
+using CSharpSecaoDez.ExercicioFixacao.EntitiesF;
 
 namespace  CSharpSecaoDez
 {
@@ -16,7 +18,8 @@ namespace  CSharpSecaoDez
         public static void Main(string[] args)
         {
           //  ExercicioConta.ExercicioConta.ExecutarExercicioConta();
-          ExercicioResolvido.ExercicioResolvido.ExecutarExercicioResolvido();
+          //ExercicioResolvido.ExercicioResolvido.ExecutarExercicioResolvido();
+          ExercicioFixacao.ExercicioFixacao.ExecutarExercicioFixacao();
         }
 
     }
