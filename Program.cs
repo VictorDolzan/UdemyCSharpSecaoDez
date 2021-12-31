@@ -13,6 +13,8 @@ using CSharpSecaoDez.ExercicioFixacao.EntitiesF;
 using CSharpSecaoDez.ExercicioResolvidoDois;
 using CSharpSecaoDez.ExercicioResolvidoDois.EntitiesRD;
 using CSharpSecaoDez.ExercicioResolvidoDois.EntitiesRD.EnumsRD;
+using CSharpSecaoDez.ExercicioFixacaoDois;
+using CSharpSecaoDez.ExercicioFixacaoDois.EntitiesEFD;
 
 namespace  CSharpSecaoDez
 {
@@ -23,7 +25,8 @@ namespace  CSharpSecaoDez
           //ExercicioConta.ExercicioConta.ExecutarExercicioConta();
           //ExercicioResolvido.ExercicioResolvido.ExecutarExercicioResolvido();
           //ExercicioFixacao.ExercicioFixacao.ExecutarExercicioFixacao();
-          ExercicioResolvidoDois.ExercicioResolvidoDois.ExecutarExercicioResolvidoDois();
+          //ExercicioResolvidoDois.ExercicioResolvidoDois.ExecutarExercicioResolvidoDois();
+          ExercicioFixacaoDois.ExercicioFixacaoDois.ExecutarExercicioFixacaoDois();
         }
 
     }

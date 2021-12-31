@@ -8,10 +8,10 @@ using System.Globalization;
 
 namespace CSharpSecaoDez.ExercicioResolvidoDois.EntitiesRD.EnumsRD
 {
-    public enum Color : int
+    public enum Color
     {
-        Black = 0,
-        Blue = 1,
-        Red = 2
+        Black,
+        Blue,
+        Red
     }
 }

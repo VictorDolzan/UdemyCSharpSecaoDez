@@ -22,9 +22,8 @@ namespace CSharpSecaoDez.ExercicioResolvidoDois.EntitiesRD
         }
 
         public override double Area()
-        {
-            double pi = 3.14;
-            return pi * Math.Pow(Radius, 2);
+        {            
+            return Math.PI * Math.Pow(Radius, 2);
         }
     }
 }
