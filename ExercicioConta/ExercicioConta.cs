@@ -45,14 +45,47 @@ namespace  CSharpSecaoDez.ExercicioConta
 
             //EXERCICIO SOBREPOSIÇÃO COM 'VIRTUAL' E 'OVERRIDE'
 
-            Account acc1 = new Account(1001, "Alex", 500.0);
-            Account acc2 = new SavingsAccount(1002, "Ana", 500.0, 0.01);
+            // Account acc1 = new Account(1001, "Alex", 500.0);
+            // Account acc2 = new SavingsAccount(1002, "Ana", 500.0, 0.01);
 
-            acc1.Withdraw(10);
-            acc2.Withdraw(10);
+            // acc1.Withdraw(10);
+            // acc2.Withdraw(10);
 
-            Console.WriteLine(acc1.Balance);
-            Console.WriteLine(acc2.Balance);
+            // Console.WriteLine(acc1.Balance);
+            // Console.WriteLine(acc2.Balance);
+
+            //EXERCICIO DE CLASSE ABSTRATA e POLIMORFISMO
+
+            List<Account> lista = new List<Account>();
+
+            lista.Add(new SavingsAccount(1001, "ALex", 500, 0.01));
+            lista.Add(new BussinessAccount(1002, "Maria", 500, 400.0));
+            lista.Add(new SavingsAccount(1003, "Bob", 500.0, 0.01));
+            lista.Add(new BussinessAccount(1004, "Anna", 500.0, 500.0));
+            
+            double sum = 0.0;
+            foreach(Account acc in lista)
+            {
+                sum += acc.Balance;
+            }
+
+            Console.WriteLine("Total balance: " + sum.ToString("F2", CultureInfo.InvariantCulture));
+
+            sum = 0.0;
+            foreach(Account acc in lista)
+            {
+                acc.Withdraw(10);
+                sum += acc.Balance;
+            }
+
+            foreach(Account acc in lista)
+            {
+                Console.WriteLine("Saldo atualizado para a conta: " 
+                + acc.NumberAccount
+                + ": "
+                + acc.Balance.ToString("F2", CultureInfo.InvariantCulture));                
+            }
+            Console.WriteLine("Valor total da conta: " + sum.ToString("F2"));
         }
     }
 }

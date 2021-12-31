@@ -7,7 +7,7 @@ using System.Globalization;
 
 namespace  CSharpSecaoDez.ExercicioConta.Entities
 {
-    public class Account
+    abstract class Account
     {
         public  int NumberAccount { get; private set; }
         public string Holder { get; private set; }
